@@ -178,8 +178,20 @@ write.csv(surveyLocs, "data/survey_locations.csv",
 # if you would like to share this with collaborators/colleagues
 html_fl <- tempfile(tmpdir = getwd(), fileext = ".html")
 
+## load trails and range shapefiles before you take a screenshot
+trailA <- st_read("data/spatial/trailA.shp")
+trailB <- st_read("data/spatial/Trail_2.shp")
+trailC <- st_read("data/spatial/Trails.shp")
+range <- st_read("data/spatial/Range_B.shp")
+
+surveyMap <- mapview(surveyLocs, col.regions = "red") +
+  mapview(trailA, col.regions = "black") +
+  mapview(trailB, col.regions = "black") +
+  mapview(trailC, col.regions = "black") +
+  mapview(range, col.regions = "gray", alpha.regions = 0.01)
+
 # create standalone .html
-mapview::mapshot(vis, url = html_fl)
+mapview::mapshot(surveyMap, url = html_fl)
 ```
 
 

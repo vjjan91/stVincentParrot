@@ -2,8 +2,6 @@
 .Rhistory
 .Rapp.history
 
-# do not upload elevation
-data/elevation
 
 # User-specific files
 .Ruserdata

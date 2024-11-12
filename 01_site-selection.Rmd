@@ -70,7 +70,7 @@ bb_stVincent <- st_bbox(bbox$finished, crs = 4326) %>%
   st_transform(., crs = 32620)
 
 # load elevation
-alt <- terra::rast("data/elevation/alt")
+alt <- terra::rast("data/elevation/alos-30m.tif")
 
 # note: the following line of code can take a few minutes for execution
 alt <- terra::project(alt, "epsg:32620")
@@ -136,6 +136,7 @@ visEdit <-  vis %>%
 
 ## Convert the new survey locations to a dataframe
 ```{r}
+
 # first, we will backtransform the elevation coordinate system
 alt.hills <- project(alt.hills, "epsg:4326")
 
@@ -153,6 +154,9 @@ surveyAttr <- read.csv("data/surveyPointAttributes.csv")
 surveyLocs <- right_join(surveyLocs,
                          surveyAttr, by = "ID")
 ```
+
+
+
 
 ## Create shapefiles for fieldwork
 ```{r}

@@ -1,0 +1,14 @@
+introduction
+attribution
+data-access
+data-processing
+site-selection
+load-necessary-libraries
+load-study-area-and-associated-shapefiles
+extracting-elevation-from-previous-survey-points
+interactive-visualization-of-existing-survey-locations
+manually-edit-and-choose-new-points-for-the-study
+convert-the-new-survey-locations-to-a-dataframe
+create-shapefiles-for-fieldwork
+saving-an-interactive-file-for-collaborators
+create-.gpx-file-for-gps

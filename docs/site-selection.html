@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Section 2 Site selection | Source code and supporting information for Passive acoustic monitoring of the St. Vincent’s Parrot</title>
+  <meta name="description" content="Section 2 Site selection | Source code and supporting information for Passive acoustic monitoring of the St. Vincent’s Parrot" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Section 2 Site selection | Source code and supporting information for Passive acoustic monitoring of the St. Vincent’s Parrot" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="vjjan91/stVincentParrot" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Section 2 Site selection | Source code and supporting information for Passive acoustic monitoring of the St. Vincent’s Parrot" />
+  
+  
+  
+
+<meta name="author" content="Vijay Ramesh" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#attribution"><i class="fa fa-check"></i><b>1.1</b> Attribution</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#data-access"><i class="fa fa-check"></i><b>1.2</b> Data access</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#data-processing"><i class="fa fa-check"></i><b>1.3</b> Data processing</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="site-selection.html"><a href="site-selection.html"><i class="fa fa-check"></i><b>2</b> Site selection</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="site-selection.html"><a href="site-selection.html#load-necessary-libraries"><i class="fa fa-check"></i><b>2.1</b> Load necessary libraries</a></li>
+<li class="chapter" data-level="2.2" data-path="site-selection.html"><a href="site-selection.html#load-study-area-and-associated-shapefiles"><i class="fa fa-check"></i><b>2.2</b> Load study area and associated shapefiles</a></li>
+<li class="chapter" data-level="2.3" data-path="site-selection.html"><a href="site-selection.html#extracting-elevation-from-previous-survey-points"><i class="fa fa-check"></i><b>2.3</b> Extracting elevation from previous survey points</a></li>
+<li class="chapter" data-level="2.4" data-path="site-selection.html"><a href="site-selection.html#interactive-visualization-of-existing-survey-locations"><i class="fa fa-check"></i><b>2.4</b> Interactive visualization of existing survey locations</a></li>
+<li class="chapter" data-level="2.5" data-path="site-selection.html"><a href="site-selection.html#manually-edit-and-choose-new-points-for-the-study"><i class="fa fa-check"></i><b>2.5</b> Manually edit and choose new points for the study</a></li>
+<li class="chapter" data-level="2.6" data-path="site-selection.html"><a href="site-selection.html#convert-the-new-survey-locations-to-a-dataframe"><i class="fa fa-check"></i><b>2.6</b> Convert the new survey locations to a dataframe</a></li>
+<li class="chapter" data-level="2.7" data-path="site-selection.html"><a href="site-selection.html#create-shapefiles-for-fieldwork"><i class="fa fa-check"></i><b>2.7</b> Create shapefiles for fieldwork</a></li>
+<li class="chapter" data-level="2.8" data-path="site-selection.html"><a href="site-selection.html#saving-an-interactive-file-for-collaborators"><i class="fa fa-check"></i><b>2.8</b> Saving an interactive file for collaborators</a></li>
+<li class="chapter" data-level="2.9" data-path="site-selection.html"><a href="site-selection.html#create-.gpx-file-for-gps"><i class="fa fa-check"></i><b>2.9</b> Create .gpx file for GPS</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Source code and supporting information for <em>Passive acoustic monitoring of the St. Vincent’s Parrot</em></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="site-selection" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Section 2</span> Site selection<a href="site-selection.html#site-selection" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The aim of this script is to identify locations that are suitable to carry out acoustic monitoring of the St. Vincent’s parrot across St. Vincent. Specific factors to consider are distance between recorders, elevation, habitat type and logistical constraints.</p>
+<p>This script was initially generated during a workshop with the Forestry Department of St. Vincent and the Grenadines on Nov 4th 2024.</p>
+<p>Note: <em>Load the workspace saved if you have already used functions from mapEdit to interactively edit the map and add locations</em>.</p>
+<div id="load-necessary-libraries" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Load necessary libraries<a href="site-selection.html#load-necessary-libraries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="site-selection.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-2"><a href="site-selection.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="site-selection.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(mapview)</span>
+<span id="cb1-4"><a href="site-selection.html#cb1-4" tabindex="-1"></a><span class="fu">library</span>(mapedit)</span>
+<span id="cb1-5"><a href="site-selection.html#cb1-5" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
+<span id="cb1-6"><a href="site-selection.html#cb1-6" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb1-7"><a href="site-selection.html#cb1-7" tabindex="-1"></a><span class="fu">library</span>(spatstat.random)</span>
+<span id="cb1-8"><a href="site-selection.html#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="site-selection.html#cb1-9" tabindex="-1"></a><span class="co"># for plotting</span></span>
+<span id="cb1-10"><a href="site-selection.html#cb1-10" tabindex="-1"></a><span class="fu">library</span>(viridis)</span>
+<span id="cb1-11"><a href="site-selection.html#cb1-11" tabindex="-1"></a><span class="fu">library</span>(colorspace)</span>
+<span id="cb1-12"><a href="site-selection.html#cb1-12" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb1-13"><a href="site-selection.html#cb1-13" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-14"><a href="site-selection.html#cb1-14" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb1-15"><a href="site-selection.html#cb1-15" tabindex="-1"></a><span class="fu">library</span>(fastmap)</span></code></pre></div>
+</div>
+<div id="load-study-area-and-associated-shapefiles" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Load study area and associated shapefiles<a href="site-selection.html#load-study-area-and-associated-shapefiles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>First, we will plot shapefiles locations where points were chosen for a previous exploratory study. We currently have locations for Forestry Watchpoints, Gap points and previous and potential locations where AudioMoth recorders were and could be deployed.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="site-selection.html#cb2-1" tabindex="-1"></a><span class="co"># load watchPoints</span></span>
+<span id="cb2-2"><a href="site-selection.html#cb2-2" tabindex="-1"></a>watchPoints <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;data/spatial/watchPoints.shp&quot;</span>)</span>
+<span id="cb2-3"><a href="site-selection.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="site-selection.html#cb2-4" tabindex="-1"></a><span class="co"># load gap points</span></span>
+<span id="cb2-5"><a href="site-selection.html#cb2-5" tabindex="-1"></a>gapPoints <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;data/spatial/All_gaps.shp&quot;</span>)</span>
+<span id="cb2-6"><a href="site-selection.html#cb2-6" tabindex="-1"></a>gapPoints <span class="ot">&lt;-</span> <span class="fu">st_zm</span>(gapPoints)</span>
+<span id="cb2-7"><a href="site-selection.html#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="site-selection.html#cb2-8" tabindex="-1"></a><span class="co"># load potential audioMoth locations</span></span>
+<span id="cb2-9"><a href="site-selection.html#cb2-9" tabindex="-1"></a><span class="co"># the above points also contain locations from a previous deployment of the AudioMoths</span></span>
+<span id="cb2-10"><a href="site-selection.html#cb2-10" tabindex="-1"></a>potentialAM <span class="ot">&lt;-</span><span class="fu">st_read</span>(<span class="st">&quot;data/spatial/potentialAM.shp&quot;</span>)</span>
+<span id="cb2-11"><a href="site-selection.html#cb2-11" tabindex="-1"></a>potentialAM <span class="ot">&lt;-</span> <span class="fu">st_zm</span>(potentialAM)</span>
+<span id="cb2-12"><a href="site-selection.html#cb2-12" tabindex="-1"></a>potentialAM <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(potentialAM, <span class="at">crs =</span> <span class="dv">32620</span>)</span>
+<span id="cb2-13"><a href="site-selection.html#cb2-13" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="site-selection.html#cb2-14" tabindex="-1"></a><span class="co"># new study design</span></span>
+<span id="cb2-15"><a href="site-selection.html#cb2-15" tabindex="-1"></a><span class="co"># the below shapefile contains random points chosen for the new survey</span></span>
+<span id="cb2-16"><a href="site-selection.html#cb2-16" tabindex="-1"></a>surveyDesign <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;data/spatial/_strRndSmp_trails_10m_stratum.shp&quot;</span>)</span>
+<span id="cb2-17"><a href="site-selection.html#cb2-17" tabindex="-1"></a>surveyDesign <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(surveyDesign, <span class="at">crs =</span> <span class="dv">32620</span>)</span></code></pre></div>
+</div>
+<div id="extracting-elevation-from-previous-survey-points" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Extracting elevation from previous survey points<a href="site-selection.html#extracting-elevation-from-previous-survey-points" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will extract elevation from previous survey locations and edit formatting for the existing objects prior to editing the same.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="site-selection.html#cb3-1" tabindex="-1"></a><span class="co"># create bounding box/polygon interactively for St.Vincent</span></span>
+<span id="cb3-2"><a href="site-selection.html#cb3-2" tabindex="-1"></a><span class="co"># for the sake of this exercise, we created a bounding box that is larger than the total area required for sampling</span></span>
+<span id="cb3-3"><a href="site-selection.html#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="site-selection.html#cb3-4" tabindex="-1"></a><span class="co"># Run the following two lines if you haven&#39;t previously executed the same</span></span>
+<span id="cb3-5"><a href="site-selection.html#cb3-5" tabindex="-1"></a><span class="co"># bbox &lt;- vis %&gt;%</span></span>
+<span id="cb3-6"><a href="site-selection.html#cb3-6" tabindex="-1"></a><span class="co">#  editMap()</span></span>
+<span id="cb3-7"><a href="site-selection.html#cb3-7" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="site-selection.html#cb3-8" tabindex="-1"></a><span class="co"># bounding box for elevation</span></span>
+<span id="cb3-9"><a href="site-selection.html#cb3-9" tabindex="-1"></a>bb_stVincent <span class="ot">&lt;-</span> <span class="fu">st_bbox</span>(bbox<span class="sc">$</span>finished, <span class="at">crs =</span> <span class="dv">4326</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-10"><a href="site-selection.html#cb3-10" tabindex="-1"></a>  <span class="fu">st_as_sfc</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-11"><a href="site-selection.html#cb3-11" tabindex="-1"></a>  <span class="fu">st_sf</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb3-12"><a href="site-selection.html#cb3-12" tabindex="-1"></a>  <span class="fu">st_transform</span>(., <span class="at">crs =</span> <span class="dv">32620</span>)</span>
+<span id="cb3-13"><a href="site-selection.html#cb3-13" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="site-selection.html#cb3-14" tabindex="-1"></a><span class="co"># load elevation</span></span>
+<span id="cb3-15"><a href="site-selection.html#cb3-15" tabindex="-1"></a>alt <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">rast</span>(<span class="st">&quot;data/elevation/alos-30m.tif&quot;</span>)</span>
+<span id="cb3-16"><a href="site-selection.html#cb3-16" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="site-selection.html#cb3-17" tabindex="-1"></a><span class="co"># note: the following line of code can take a few minutes for execution</span></span>
+<span id="cb3-18"><a href="site-selection.html#cb3-18" tabindex="-1"></a>alt <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">project</span>(alt, <span class="st">&quot;epsg:32620&quot;</span>)</span>
+<span id="cb3-19"><a href="site-selection.html#cb3-19" tabindex="-1"></a>alt.hills <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">crop</span>(alt, bb_stVincent)</span>
+<span id="cb3-20"><a href="site-selection.html#cb3-20" tabindex="-1"></a><span class="fu">rm</span>(alt)</span>
+<span id="cb3-21"><a href="site-selection.html#cb3-21" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="site-selection.html#cb3-22" tabindex="-1"></a><span class="co"># add elevation to each of the above shapefiles/points by extracting them from the digital elevation model</span></span>
+<span id="cb3-23"><a href="site-selection.html#cb3-23" tabindex="-1"></a>elev_watch <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">extract</span>(alt.hills, watchPoints);</span>
+<span id="cb3-24"><a href="site-selection.html#cb3-24" tabindex="-1"></a><span class="fu">names</span>(elev_watch) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ID&quot;</span>,<span class="st">&quot;elev&quot;</span>)</span>
+<span id="cb3-25"><a href="site-selection.html#cb3-25" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="site-selection.html#cb3-26" tabindex="-1"></a>elev_gap <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">extract</span>(alt.hills, gapPoints)</span>
+<span id="cb3-27"><a href="site-selection.html#cb3-27" tabindex="-1"></a><span class="fu">names</span>(elev_gap) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ID&quot;</span>, <span class="st">&quot;elev&quot;</span>)</span>
+<span id="cb3-28"><a href="site-selection.html#cb3-28" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="site-selection.html#cb3-29" tabindex="-1"></a>elev_potentialAM <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">extract</span>(alt.hills, potentialAM)</span>
+<span id="cb3-30"><a href="site-selection.html#cb3-30" tabindex="-1"></a><span class="fu">names</span>(elev_potentialAM) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ID&quot;</span>,<span class="st">&quot;elev&quot;</span>)</span>
+<span id="cb3-31"><a href="site-selection.html#cb3-31" tabindex="-1"></a></span>
+<span id="cb3-32"><a href="site-selection.html#cb3-32" tabindex="-1"></a>elev_surveyDesign <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">extract</span>(alt.hills, surveyDesign) </span>
+<span id="cb3-33"><a href="site-selection.html#cb3-33" tabindex="-1"></a><span class="fu">names</span>(elev_surveyDesign) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;ID&quot;</span>,<span class="st">&quot;elev&quot;</span>)</span>
+<span id="cb3-34"><a href="site-selection.html#cb3-34" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="site-selection.html#cb3-35" tabindex="-1"></a><span class="co"># add elevation back to the shapefiles</span></span>
+<span id="cb3-36"><a href="site-selection.html#cb3-36" tabindex="-1"></a>watchPoints <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(watchPoints, elev_watch[,<span class="dv">2</span>])</span>
+<span id="cb3-37"><a href="site-selection.html#cb3-37" tabindex="-1"></a><span class="fu">names</span>(watchPoints)[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">&quot;elev&quot;</span></span>
+<span id="cb3-38"><a href="site-selection.html#cb3-38" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="site-selection.html#cb3-39" tabindex="-1"></a>gapPoints <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(gapPoints, elev_gap[,<span class="dv">2</span>])</span>
+<span id="cb3-40"><a href="site-selection.html#cb3-40" tabindex="-1"></a><span class="fu">names</span>(gapPoints)[<span class="dv">11</span>] <span class="ot">&lt;-</span> <span class="st">&quot;elev&quot;</span></span>
+<span id="cb3-41"><a href="site-selection.html#cb3-41" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="site-selection.html#cb3-42" tabindex="-1"></a>potentialAM <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(potentialAM, elev_potentialAM[,<span class="dv">2</span>])</span>
+<span id="cb3-43"><a href="site-selection.html#cb3-43" tabindex="-1"></a><span class="fu">names</span>(potentialAM)[<span class="dv">9</span>] <span class="ot">&lt;-</span> <span class="st">&quot;elev&quot;</span></span>
+<span id="cb3-44"><a href="site-selection.html#cb3-44" tabindex="-1"></a></span>
+<span id="cb3-45"><a href="site-selection.html#cb3-45" tabindex="-1"></a>surveyDesign <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(surveyDesign, elev_surveyDesign[,<span class="dv">2</span>])</span>
+<span id="cb3-46"><a href="site-selection.html#cb3-46" tabindex="-1"></a><span class="fu">names</span>(surveyDesign)[<span class="dv">6</span>] <span class="ot">&lt;-</span> <span class="st">&quot;elev&quot;</span></span>
+<span id="cb3-47"><a href="site-selection.html#cb3-47" tabindex="-1"></a></span>
+<span id="cb3-48"><a href="site-selection.html#cb3-48" tabindex="-1"></a><span class="do">## editing the files to indicate what type of point it is</span></span>
+<span id="cb3-49"><a href="site-selection.html#cb3-49" tabindex="-1"></a>watchPoints<span class="sc">$</span>type <span class="ot">&lt;-</span> <span class="st">&quot;watchPoint&quot;</span></span>
+<span id="cb3-50"><a href="site-selection.html#cb3-50" tabindex="-1"></a>gapPoints<span class="sc">$</span>type <span class="ot">&lt;-</span> <span class="st">&quot;gapPoint&quot;</span></span>
+<span id="cb3-51"><a href="site-selection.html#cb3-51" tabindex="-1"></a>potentialAM<span class="sc">$</span>type <span class="ot">&lt;-</span> <span class="st">&quot;potentialAM&quot;</span></span>
+<span id="cb3-52"><a href="site-selection.html#cb3-52" tabindex="-1"></a>surveyDesign<span class="sc">$</span>type <span class="ot">&lt;-</span> <span class="st">&quot;surveyDesign&quot;</span></span></code></pre></div>
+</div>
+<div id="interactive-visualization-of-existing-survey-locations" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Interactive visualization of existing survey locations<a href="site-selection.html#interactive-visualization-of-existing-survey-locations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="site-selection.html#cb4-1" tabindex="-1"></a><span class="co"># visualization and editing</span></span>
+<span id="cb4-2"><a href="site-selection.html#cb4-2" tabindex="-1"></a>vis <span class="ot">&lt;-</span> <span class="fu">mapview</span>(watchPoints, <span class="at">col.regions =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb4-3"><a href="site-selection.html#cb4-3" tabindex="-1"></a>               <span class="at">legend =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="site-selection.html#cb4-4" tabindex="-1"></a>  <span class="fu">mapview</span>(gapPoints, <span class="at">col.regions =</span> <span class="st">&quot;white&quot;</span>) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="site-selection.html#cb4-5" tabindex="-1"></a>  <span class="fu">mapview</span>(potentialAM, <span class="at">col.regions =</span> <span class="st">&quot;green&quot;</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="site-selection.html#cb4-6" tabindex="-1"></a>  <span class="fu">mapview</span>(surveyDesign, <span class="at">col.regions =</span> <span class="st">&quot;brown&quot;</span>)</span>
+<span id="cb4-7"><a href="site-selection.html#cb4-7" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="site-selection.html#cb4-8" tabindex="-1"></a>vis</span></code></pre></div>
+</div>
+<div id="manually-edit-and-choose-new-points-for-the-study" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Manually edit and choose new points for the study<a href="site-selection.html#manually-edit-and-choose-new-points-for-the-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At this stage, we work with Forestry agents from SVG to determine what points should be ultimately chosen for the monitoring of the St. Vincent’s parrot (If you have done this already, please skip and carry out other analysis)</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="site-selection.html#cb5-1" tabindex="-1"></a><span class="do">## Using functions from mapedit</span></span>
+<span id="cb5-2"><a href="site-selection.html#cb5-2" tabindex="-1"></a><span class="do">## Note: the following lines of code can open an interactive html file that can be edited</span></span>
+<span id="cb5-3"><a href="site-selection.html#cb5-3" tabindex="-1"></a><span class="do">## Please ensure that you save it by clicking DONE after editing the points</span></span>
+<span id="cb5-4"><a href="site-selection.html#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="site-selection.html#cb5-5" tabindex="-1"></a><span class="co"># Please only run the following two lines of code if you haven&#39;t previously run it</span></span>
+<span id="cb5-6"><a href="site-selection.html#cb5-6" tabindex="-1"></a><span class="co"># visEdit &lt;-  vis %&gt;%</span></span>
+<span id="cb5-7"><a href="site-selection.html#cb5-7" tabindex="-1"></a><span class="co">#  editMap()</span></span></code></pre></div>
+</div>
+<div id="convert-the-new-survey-locations-to-a-dataframe" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Convert the new survey locations to a dataframe<a href="site-selection.html#convert-the-new-survey-locations-to-a-dataframe" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="site-selection.html#cb6-1" tabindex="-1"></a><span class="co"># first, we will backtransform the elevation coordinate system</span></span>
+<span id="cb6-2"><a href="site-selection.html#cb6-2" tabindex="-1"></a>alt.hills <span class="ot">&lt;-</span> <span class="fu">project</span>(alt.hills, <span class="st">&quot;epsg:4326&quot;</span>)</span>
+<span id="cb6-3"><a href="site-selection.html#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="site-selection.html#cb6-4" tabindex="-1"></a><span class="co"># new survey locations</span></span>
+<span id="cb6-5"><a href="site-selection.html#cb6-5" tabindex="-1"></a>surveyLocs <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(visEdit<span class="sc">$</span>finished,</span>
+<span id="cb6-6"><a href="site-selection.html#cb6-6" tabindex="-1"></a>               terra<span class="sc">::</span><span class="fu">extract</span>(alt.hills, visEdit<span class="sc">$</span>finished))</span>
+<span id="cb6-7"><a href="site-selection.html#cb6-7" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="site-selection.html#cb6-8" tabindex="-1"></a><span class="fu">names</span>(surveyLocs)[<span class="dv">5</span>] <span class="ot">&lt;-</span> <span class="st">&quot;elevation_in_metres&quot;</span></span>
+<span id="cb6-9"><a href="site-selection.html#cb6-9" tabindex="-1"></a>surveyLocs<span class="sc">$</span>elevation_in_metres <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(surveyLocs<span class="sc">$</span>elevation_in_metres))</span>
+<span id="cb6-10"><a href="site-selection.html#cb6-10" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="site-selection.html#cb6-11" tabindex="-1"></a><span class="do">## load the survey point attributes taken down earlier</span></span>
+<span id="cb6-12"><a href="site-selection.html#cb6-12" tabindex="-1"></a><span class="do">## during the workshop on Nov 4th, 2024 - a .csv was co-created with the forestry department staff to figure out audio recorder deployment locations</span></span>
+<span id="cb6-13"><a href="site-selection.html#cb6-13" tabindex="-1"></a><span class="do">## additional information on each location chosen interactively was added to separate columns</span></span>
+<span id="cb6-14"><a href="site-selection.html#cb6-14" tabindex="-1"></a><span class="do">## in addition, a separate column was created to merge the survey location information (generated above interactively) with the attributes</span></span>
+<span id="cb6-15"><a href="site-selection.html#cb6-15" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="site-selection.html#cb6-16" tabindex="-1"></a>surveyAttr <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data/survey_pointAttributes.csv&quot;</span>)</span>
+<span id="cb6-17"><a href="site-selection.html#cb6-17" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="site-selection.html#cb6-18" tabindex="-1"></a><span class="do">## add the survey attributes to the survey locations</span></span>
+<span id="cb6-19"><a href="site-selection.html#cb6-19" tabindex="-1"></a>surveyLocs <span class="ot">&lt;-</span> <span class="fu">right_join</span>(surveyLocs,</span>
+<span id="cb6-20"><a href="site-selection.html#cb6-20" tabindex="-1"></a>                         surveyAttr, <span class="at">by =</span> </span>
+<span id="cb6-21"><a href="site-selection.html#cb6-21" tabindex="-1"></a>                           <span class="fu">c</span>(<span class="st">&quot;ID&quot;</span> <span class="ot">=</span> <span class="st">&quot;pointID_from_R&quot;</span>))</span>
+<span id="cb6-22"><a href="site-selection.html#cb6-22" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="site-selection.html#cb6-23" tabindex="-1"></a><span class="do">## Clean up the above file</span></span>
+<span id="cb6-24"><a href="site-selection.html#cb6-24" tabindex="-1"></a>surveyLocs <span class="ot">&lt;-</span> surveyLocs[,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>,<span class="dv">11</span><span class="sc">:</span><span class="dv">13</span>)]</span></code></pre></div>
+</div>
+<div id="create-shapefiles-for-fieldwork" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Create shapefiles for fieldwork<a href="site-selection.html#create-shapefiles-for-fieldwork" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will generate shapefiles that can be utilized for fieldwork. Please note that the surveyLocations.csv file generated below needs to be updated after fieldwork is carried out to include the updated locations when recorder deployment was carried out.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="site-selection.html#cb7-1" tabindex="-1"></a>surveyLocs <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(surveyLocs) <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="site-selection.html#cb7-2" tabindex="-1"></a>  <span class="st">`</span><span class="at">st_crs&lt;-</span><span class="st">`</span>(<span class="dv">4326</span>)</span>
+<span id="cb7-3"><a href="site-selection.html#cb7-3" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="site-selection.html#cb7-4" tabindex="-1"></a><span class="co"># saving shapefiles for visualization/viewing in other softwares</span></span>
+<span id="cb7-5"><a href="site-selection.html#cb7-5" tabindex="-1"></a><span class="fu">st_write</span>(surveyLocs, <span class="st">&quot;data/spatial/surveyLocations.shp&quot;</span>,</span>
+<span id="cb7-6"><a href="site-selection.html#cb7-6" tabindex="-1"></a>         <span class="at">driver =</span> <span class="st">&quot;ESRI Shapefile&quot;</span>)</span>
+<span id="cb7-7"><a href="site-selection.html#cb7-7" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="site-selection.html#cb7-8" tabindex="-1"></a><span class="co"># write out latitude and longitude for .csv</span></span>
+<span id="cb7-9"><a href="site-selection.html#cb7-9" tabindex="-1"></a>surveyLocs <span class="ot">&lt;-</span> surveyLocs <span class="sc">%&gt;%</span></span>
+<span id="cb7-10"><a href="site-selection.html#cb7-10" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">longitude =</span> sf<span class="sc">::</span><span class="fu">st_coordinates</span>(.)[,<span class="dv">1</span>],</span>
+<span id="cb7-11"><a href="site-selection.html#cb7-11" tabindex="-1"></a>                <span class="at">latitude =</span> sf<span class="sc">::</span><span class="fu">st_coordinates</span>(.)[,<span class="dv">2</span>])</span>
+<span id="cb7-12"><a href="site-selection.html#cb7-12" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="site-selection.html#cb7-13" tabindex="-1"></a><span class="fu">write.csv</span>(surveyLocs, <span class="st">&quot;data/survey_locations.csv&quot;</span>,</span>
+<span id="cb7-14"><a href="site-selection.html#cb7-14" tabindex="-1"></a>          <span class="at">row.names =</span> F)</span></code></pre></div>
+</div>
+<div id="saving-an-interactive-file-for-collaborators" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Saving an interactive file for collaborators<a href="site-selection.html#saving-an-interactive-file-for-collaborators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="site-selection.html#cb8-1" tabindex="-1"></a><span class="co"># to save this to a file </span></span>
+<span id="cb8-2"><a href="site-selection.html#cb8-2" tabindex="-1"></a><span class="co"># if you would like to share this with collaborators/colleagues</span></span>
+<span id="cb8-3"><a href="site-selection.html#cb8-3" tabindex="-1"></a>html_fl <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">tmpdir =</span> <span class="fu">getwd</span>(), <span class="at">fileext =</span> <span class="st">&quot;interactive-visualization-surveyLocations.html&quot;</span>)</span>
+<span id="cb8-4"><a href="site-selection.html#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="site-selection.html#cb8-5" tabindex="-1"></a><span class="do">## load trails and range shapefiles before you take a screenshot</span></span>
+<span id="cb8-6"><a href="site-selection.html#cb8-6" tabindex="-1"></a>trailA <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;data/spatial/trailA.shp&quot;</span>)</span>
+<span id="cb8-7"><a href="site-selection.html#cb8-7" tabindex="-1"></a>trailB <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;data/spatial/Trail_2.shp&quot;</span>)</span>
+<span id="cb8-8"><a href="site-selection.html#cb8-8" tabindex="-1"></a>trailC <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;data/spatial/Trails.shp&quot;</span>)</span>
+<span id="cb8-9"><a href="site-selection.html#cb8-9" tabindex="-1"></a>range <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;data/spatial/Range_B.shp&quot;</span>)</span>
+<span id="cb8-10"><a href="site-selection.html#cb8-10" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="site-selection.html#cb8-11" tabindex="-1"></a>surveyMap <span class="ot">&lt;-</span> <span class="fu">mapview</span>(surveyLocs, <span class="at">col.regions =</span> <span class="st">&quot;red&quot;</span>) <span class="sc">+</span></span>
+<span id="cb8-12"><a href="site-selection.html#cb8-12" tabindex="-1"></a>  <span class="fu">mapview</span>(trailA, <span class="at">col.regions =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb8-13"><a href="site-selection.html#cb8-13" tabindex="-1"></a>  <span class="fu">mapview</span>(trailB, <span class="at">col.regions =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb8-14"><a href="site-selection.html#cb8-14" tabindex="-1"></a>  <span class="fu">mapview</span>(trailC, <span class="at">col.regions =</span> <span class="st">&quot;black&quot;</span>) <span class="sc">+</span></span>
+<span id="cb8-15"><a href="site-selection.html#cb8-15" tabindex="-1"></a>  <span class="fu">mapview</span>(range, <span class="at">col.regions =</span> <span class="st">&quot;gray&quot;</span>, <span class="at">alpha.regions =</span> <span class="fl">0.01</span>)</span>
+<span id="cb8-16"><a href="site-selection.html#cb8-16" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="site-selection.html#cb8-17" tabindex="-1"></a><span class="co"># create standalone .html</span></span>
+<span id="cb8-18"><a href="site-selection.html#cb8-18" tabindex="-1"></a>mapview<span class="sc">::</span><span class="fu">mapshot</span>(surveyMap, <span class="at">url =</span> html_fl)</span>
+<span id="cb8-19"><a href="site-selection.html#cb8-19" tabindex="-1"></a></span>
+<span id="cb8-20"><a href="site-selection.html#cb8-20" tabindex="-1"></a>surveyMap</span></code></pre></div>
+<iframe src="interactive-visualization-surveyLocations.html" height="600px" width="100%" style="border:none;">
+</iframe>
+</div>
+<div id="create-.gpx-file-for-gps" class="section level2 hasAnchor" number="2.9">
+<h2><span class="header-section-number">2.9</span> Create .gpx file for GPS<a href="site-selection.html#create-.gpx-file-for-gps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Note that .gpx files are very sensitive to the .xml structure and the attributes need to be saved based on an appropriate format (For more information: <a href="https://www.topografix.com/GPX/1/1/#type_wptType" class="uri">https://www.topografix.com/GPX/1/1/#type_wptType</a>). Once you create files in R, I would upload it in GPX Studio to make sure everything is accurate and save it again as a .gpx file to get the accurate format (<a href="https://gpx.studio/" class="uri">https://gpx.studio/</a>).</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="site-selection.html#cb9-1" tabindex="-1"></a><span class="co"># get only the attributes you need</span></span>
+<span id="cb9-2"><a href="site-selection.html#cb9-2" tabindex="-1"></a>gpx <span class="ot">&lt;-</span> surveyLocs[,<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">9</span>)]</span>
+<span id="cb9-3"><a href="site-selection.html#cb9-3" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="site-selection.html#cb9-4" tabindex="-1"></a><span class="co"># note that gpx files have specific metadata only, like name, elevation etc.</span></span>
+<span id="cb9-5"><a href="site-selection.html#cb9-5" tabindex="-1"></a><span class="fu">names</span>(gpx) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;name&quot;</span>,<span class="st">&quot;geometry&quot;</span>)</span>
+<span id="cb9-6"><a href="site-selection.html#cb9-6" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="site-selection.html#cb9-7" tabindex="-1"></a><span class="co"># sf and terra do not create .gpx files accurately: here, I have reverted to the use of rgdal</span></span>
+<span id="cb9-8"><a href="site-selection.html#cb9-8" tabindex="-1"></a><span class="co"># however, please note that rgdal was retired in 2023 and is no longer actively maintained</span></span>
+<span id="cb9-9"><a href="site-selection.html#cb9-9" tabindex="-1"></a><span class="co"># see git issue: https://github.com/r-spatial/sf/issues/2202</span></span>
+<span id="cb9-10"><a href="site-selection.html#cb9-10" tabindex="-1"></a><span class="fu">library</span>(rgdal)</span>
+<span id="cb9-11"><a href="site-selection.html#cb9-11" tabindex="-1"></a>gpx <span class="ot">&lt;-</span> <span class="fu">as</span>(gpx, <span class="st">&quot;Spatial&quot;</span>)</span>
+<span id="cb9-12"><a href="site-selection.html#cb9-12" tabindex="-1"></a><span class="fu">writeOGR</span>(gpx, <span class="st">&quot;data/surveyLocations-for-conversion.gpx&quot;</span>, <span class="at">driver =</span> <span class="st">&quot;GPX&quot;</span>, <span class="at">layer =</span> <span class="st">&quot;waypoints&quot;</span>)</span>
+<span id="cb9-13"><a href="site-selection.html#cb9-13" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="site-selection.html#cb9-14" tabindex="-1"></a><span class="co"># Now, please upload the above file in GPX Studio to make sure everything is accurate and save it again as a .gpx file to get the accurate format (https://gpx.studio/). </span></span></code></pre></div>
+<p>Once fieldwork has been completed, please include the updated .gpx files and .shp files in the results/outputs folders.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/vjjan91/stVincentParrot/edit/master/01_site-selection.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

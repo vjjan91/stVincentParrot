@@ -206,8 +206,9 @@ surveyMap <- mapview(surveyLocs, col.regions = "red") +
 
 # create standalone .html
 mapview::mapshot(surveyMap, url = html_fl)
-```
 
+surveyMap
+```
 
 ## Create .gpx file for GPS
 

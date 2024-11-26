@@ -1,5 +1,5 @@
 ---
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -209,6 +209,8 @@ mapview::mapshot(surveyMap, url = html_fl)
 
 surveyMap
 ```
+
+<iframe src="interactive-visualization-surveyLocations.html" height="600px" width="100%" style="border:none;"></iframe>
 
 ## Create .gpx file for GPS
 

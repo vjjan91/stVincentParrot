@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.6.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata><bounds minlat="13.178680000000000" minlon="-61.241504999999997" maxlat="13.376901999999999" maxlon="-61.132978000000001"/></metadata>                
+<wpt lat="13.376902" lon="-61.162853">
+  <name>PO1</name>
+</wpt>
+<wpt lat="13.363933" lon="-61.163594">
+  <name>PO2</name>
+</wpt>
+<wpt lat="13.363704" lon="-61.148039">
+  <name>PO3</name>
+</wpt>
+<wpt lat="13.347529" lon="-61.141593">
+  <name>PO4</name>
+</wpt>
+<wpt lat="13.332372" lon="-61.154251">
+  <name>PO5</name>
+</wpt>
+<wpt lat="13.327007" lon="-61.144725">
+  <name>PO6</name>
+</wpt>
+<wpt lat="13.315628" lon="-61.152653">
+  <name>PO7</name>
+</wpt>
+<wpt lat="13.30894" lon="-61.215032">
+  <name>PO26</name>
+</wpt>
+<wpt lat="13.289303" lon="-61.218415">
+  <name>PO27</name>
+</wpt>
+<wpt lat="13.278656" lon="-61.218944">
+  <name>PO28</name>
+</wpt>
+<wpt lat="13.264618" lon="-61.212642">
+  <name>PO29</name>
+</wpt>
+<wpt lat="13.278128" lon="-61.239373">
+  <name>PO30</name>
+</wpt>
+<wpt lat="13.251476" lon="-61.206077">
+  <name>PO31</name>
+</wpt>
+<wpt lat="13.241607" lon="-61.215274">
+  <name>PO32</name>
+</wpt>
+<wpt lat="13.236552" lon="-61.22192">
+  <name>PO33</name>
+</wpt>
+<wpt lat="13.234625" lon="-61.241505">
+  <name>PO34</name>
+</wpt>
+<wpt lat="13.215958" lon="-61.234028">
+  <name>PO35</name>
+</wpt>
+<wpt lat="13.322108" lon="-61.165173">
+  <name>PO8</name>
+</wpt>
+<wpt lat="13.303578" lon="-61.135758">
+  <name>PO9</name>
+</wpt>
+<wpt lat="13.288478" lon="-61.141611">
+  <name>PO10</name>
+</wpt>
+<wpt lat="13.275263" lon="-61.132978">
+  <name>PO11</name>
+</wpt>
+<wpt lat="13.270992" lon="-61.14801">
+  <name>PO12</name>
+</wpt>
+<wpt lat="13.27864" lon="-61.153558">
+  <name>PO13</name>
+</wpt>
+<wpt lat="13.26595" lon="-61.15433">
+  <name>PO14</name>
+</wpt>
+<wpt lat="13.252193" lon="-61.154389">
+  <name>PO15</name>
+</wpt>
+<wpt lat="13.24012" lon="-61.166769">
+  <name>PO16</name>
+</wpt>
+<wpt lat="13.234689" lon="-61.156201">
+  <name>PO17</name>
+</wpt>
+<wpt lat="13.225097" lon="-61.177611">
+  <name>PO18</name>
+</wpt>
+<wpt lat="13.213804" lon="-61.190495">
+  <name>PO19</name>
+</wpt>
+<wpt lat="13.198923" lon="-61.194134">
+  <name>PO20</name>
+</wpt>
+<wpt lat="13.17868" lon="-61.20421">
+  <name>PO21</name>
+</wpt>
+<wpt lat="13.188083" lon="-61.207144">
+  <name>PO22</name>
+</wpt>
+<wpt lat="13.18527" lon="-61.220177">
+  <name>PO23</name>
+</wpt>
+<wpt lat="13.201889" lon="-61.209611">
+  <name>PO24</name>
+</wpt>
+<wpt lat="13.217502" lon="-61.218403">
+  <name>PO25</name>
+</wpt>
+</gpx>

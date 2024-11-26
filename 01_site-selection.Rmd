@@ -7,6 +7,8 @@ editor_options:
 
 The aim of this script is to identify locations that are suitable to carry out acoustic monitoring of the St. Vincent's parrot across St. Vincent. Specific factors to consider are distance between recorders, elevation, habitat type and logistical constraints. 
 
+This script was initially generated during a workshop with the Forestry Department of St. Vincent and the Grenadines on Nov 4th 2024.  
+
 Note: _Load the workspace saved if you have already used functions from mapEdit to interactively edit the map and add locations_.
 
 ## Load necessary libraries
@@ -60,8 +62,9 @@ We will extract elevation from previous survey locations and edit formatting for
 # create bounding box/polygon interactively for St.Vincent
 # for the sake of this exercise, we created a bounding box that is larger than the total area required for sampling
 
-bbox <- vis %>%
-  editMap()
+# Run the following two lines if you haven't previously executed the same
+# bbox <- vis %>%
+#  editMap()
 
 # bounding box for elevation
 bb_stVincent <- st_bbox(bbox$finished, crs = 4326) %>% 
@@ -124,19 +127,19 @@ vis
 
 ## Manually edit and choose new points for the study
 
-At this stage, we work with Forestry agents from SVG to determine what points should be ultimately chosen for the monitoring of the St. Vincent's parrot
+At this stage, we work with Forestry agents from SVG to determine what points should be ultimately chosen for the monitoring of the St. Vincent's parrot (If you have done this already, please skip and carry out other analysis)
 ```{r}
 ## Using functions from mapedit
 ## Note: the following lines of code can open an interactive html file that can be edited
 ## Please ensure that you save it by clicking DONE after editing the points
 
-visEdit <-  vis %>%
-  editMap()
+# Please only run the following two lines of code if you haven't previously run it
+# visEdit <-  vis %>%
+#  editMap()
 ```
 
 ## Convert the new survey locations to a dataframe
 ```{r}
-
 # first, we will backtransform the elevation coordinate system
 alt.hills <- project(alt.hills, "epsg:4326")
 
@@ -148,17 +151,24 @@ names(surveyLocs)[5] <- "elevation_in_metres"
 surveyLocs$elevation_in_metres <- as.numeric(as.character(surveyLocs$elevation_in_metres))
 
 ## load the survey point attributes taken down earlier
-surveyAttr <- read.csv("data/surveyPointAttributes.csv")
+## during the workshop on Nov 4th, 2024 - a .csv was co-created with the forestry department staff to figure out audio recorder deployment locations
+## additional information on each location chosen interactively was added to separate columns
+## in addition, a separate column was created to merge the survey location information (generated above interactively) with the attributes
+
+surveyAttr <- read.csv("data/survey_pointAttributes.csv")
 
 ## add the survey attributes to the survey locations
 surveyLocs <- right_join(surveyLocs,
-                         surveyAttr, by = "ID")
+                         surveyAttr, by = 
+                           c("ID" = "pointID_from_R"))
+
+## Clean up the above file
+surveyLocs <- surveyLocs[,c(3,5:9,11:13)]
 ```
 
-
-
-
 ## Create shapefiles for fieldwork
+
+We will generate shapefiles that can be utilized for fieldwork. Please note that the surveyLocations.csv file generated below needs to be updated after fieldwork is carried out to include the updated locations when recorder deployment was carried out. 
 ```{r}
 surveyLocs <- st_as_sf(surveyLocs) %>%
   `st_crs<-`(4326)
@@ -180,7 +190,7 @@ write.csv(surveyLocs, "data/survey_locations.csv",
 ```{r}
 # to save this to a file 
 # if you would like to share this with collaborators/colleagues
-html_fl <- tempfile(tmpdir = getwd(), fileext = ".html")
+html_fl <- tempfile(tmpdir = getwd(), fileext = "interactive-visualization-surveyLocations.html")
 
 ## load trails and range shapefiles before you take a screenshot
 trailA <- st_read("data/spatial/trailA.shp")
@@ -204,39 +214,21 @@ mapview::mapshot(surveyMap, url = html_fl)
 Note that .gpx files are very sensitive to the .xml structure and the attributes need to be saved based on an appropriate format (For more information: https://www.topografix.com/GPX/1/1/#type_wptType). Once you create files in R, I would upload it in GPX Studio to make sure everything is accurate and save it again as a .gpx file to get the accurate format (https://gpx.studio/). 
 ```{r}
 # get only the attributes you need
-gpx <- surveyLocs[,c(2,9)]
+gpx <- surveyLocs[,c(3,9)]
 
 # note that gpx files have specific metadata only, like name, elevation etc.
 names(gpx) <- c("name","geometry")
-st_write(gpx, "data/surveyLocations.gpx",
-         dataset_options = "GPX_USE_EXTENSIONS=NO")
+
+# sf and terra do not create .gpx files accurately: here, I have reverted to the use of rgdal
+# however, please note that rgdal was retired in 2023 and is no longer actively maintained
+# see git issue: https://github.com/r-spatial/sf/issues/2202
+library(rgdal)
+gpx <- as(gpx, "Spatial")
+writeOGR(gpx, "data/surveyLocations-for-conversion.gpx", driver = "GPX", layer = "waypoints")
+
+# Now, please upload the above file in GPX Studio to make sure everything is accurate and save it again as a .gpx file to get the accurate format (https://gpx.studio/). 
 ```
 
-
-
-To do:
-
--distance between points
--elevation extract
-
-## Calculating distances between points
-```{r}
-## Distances between points
-data <- bind_rows(watchPoints[,c(2,3,4)],
-                  gapPoints[,c(11,12,13)],
-                  potentialAM[,c(9,10,11)],
-                  surveyDesign[,c(6,7,8)])
-
-trial <- as.data.frame(st_distance(data))
-```
-
-
-
-
-
-
-
-
-
+Once fieldwork has been completed, please include the updated .gpx files and .shp files in the results/outputs folders. 
 
 

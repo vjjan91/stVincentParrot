@@ -1,0 +1,36 @@
+range,pointID_from_R,survey_point_number,audioMoth_number,audioMoth_backups,elevation,habitat_type,forestry_survey_info,more_details
+WINO,1,PO1,AM7,"9,10",242,Agriculture,Survey design 2,Fancy mountain
+WINO,2,PO2,AM22,"9,10",636,Forest,Survey design 2,Kramaku
+WINO,3,PO3,AM23,"9,10",284,Forest,Survey design 2,Rocks
+WINO,4,PO4,AM24,"9,10",136,Forest,Survey design 1,Cuba mountain; Worgre
+WINO,5,PO5,AM6,"9,10",579,Forest,Survey design 2,"Mahorne Ridge, higher up"
+WINO,6,PO6,AM26,"9,10",179,Forest,Survey design 1,Mahorne Ridge
+WINO,7,PO7,AM27,"9,10",433,"Forest, close to settlement","Gap point, Bamboo ridge",
+WINO,18,PO8,AM28,"9,10",590,"Point up in Soufriere trail, up high",Soufriere trail,Random point at higher elevation
+WISO,19,PO9,AM29,"13,15",180,Farmland,Survey design 2,Hells gate
+WISO,20,PO10,AM32,"13,15",275,"Farmland, mixed",Survey design 1,Mont pleasant; road to Macmay Fall
+WISO,21,PO11,AM30,"13,15",89,Farmland,"Gap point, Old valley",
+WISO,22,PO12,AM31,"13,15",310,Forest,"Watchpoint 13 (opposite ridge), Congo Calley","Forestry boundary trail; Barry will decide on the point, going to the valley"
+WISO,23,PO13,AM33,"13,15",313,"Farmland, mixed",Survey design 2,Perseverance
+WISO,24,PO14,AM34,"13,15",401,Forest,Watchpoing 16 Jennings ,"Pass the watertank, and forestry plantation, turn left into that area"
+WISO,25,PO15,AM35,"13,15",275,Farmland,Survey design 2,"River 14, Locust mountain"
+WISO,26,PO16,AM36,"13,15",414,"Forest, plantation forest",Survey design 2,"Silverspoon, route to watchpoint 10"
+WISO,27,PO17,AM37,"13,15",314,Forest,Survey design 1,Diamond/Bobby stone area
+WISO,28,PO18,AM38,"13,15",399,"Forest, farmland",Study design 1,"Greiggs mt,Tibreau trail"
+CENT,29,PO19,AM39,"16,17",568,"Forest, plantation forest",Study design 2,Montreal trail
+CENT,30,PO20,AM40,"16,17",405,Forest,Study design 2,"Majorca, water tank"
+CENT,31,PO21,AM41,"16,17",347,"Forest, farmland",Study design 2,Herbert trail
+CENT,32,PO22,AM42,"16,17",477,Plantation forest,"Gap point, Fenton",Murray
+CENT,33,PO23,AM43,"16,17",334,Forest,"Gap point, Mt St Andrews","4 corners about the poultry farm: Wy 5, on a curve: straight in the forest, 6mts in, a tree to the right"
+CENT,34,PO24,AM44,"16,17",398,Plantation forest,Study design 1,"Vermont, Laury trail"
+CENT,35,PO25,AM45,"16,17",447,Forest,"Watchpoint 2, Paradise","About 100mts before watchpoint, to the left of the trail. About "
+LEEW,8,PO26,AM46,"18,19",190,"Agriculture, transition secondary",New point,"Trinity trail, forestry will find the trail"
+LEEW,9,PO27,AM47,"18,19",238,Forest,Survey design 2,Use trail of Monkashung
+LEEW,10,PO28,AM48,"18,19",278,Forest,"Watchpoint, Tuscany",
+LEEW,11,PO29,AM49,"18,19",529,Forest,"Gap point, Linlley valley",
+LEEW,12,PO30,AM50,"18,19",194,Forest,Survey design 1,Petit bordel
+LEEW,13,PO31,AM1,"18,19",533,Forest,Watchpoint 8,"Cumberland, close to the water tank, Hermitage"
+LEEW,14,PO32,AM14,"18,19",452,Forest,Watchpoint 6,"Cumberland, last watchpoint, young man valley"
+LEEW,15,PO33,AM3,"18,19",301,Agriculture,Survey design 2,Coffee trail
+LEEW,16,PO34,AM4,"18,19",429,Forest. Agriculture?,"Gap, Johnson Mt",
+LEEW,17,PO35,AM5,"18,19",571,Forest,Survey design 1,"Layou, find the point"

@@ -1,0 +1,36 @@
+"elevation_in_metres","range","survey_point_number","audioMoth_number","audioMoth_backups","habitat_type","forestry_survey_info","more_details","geometry","longitude","latitude"
+236.161392211914,"WINO","PO1","AM7","9,10","Agriculture","Survey design 2","Fancy mountain",c(-61.162853, 13.376902),-61.162853,13.376902
+638.448425292969,"WINO","PO2","AM22","9,10","Forest","Survey design 2","Kramaku",c(-61.163594, 13.363933),-61.163594,13.363933
+290.791351318359,"WINO","PO3","AM23","9,10","Forest","Survey design 2","Rocks",c(-61.148039, 13.363704),-61.148039,13.363704
+222.279296875,"WINO","PO4","AM24","9,10","Forest","Survey design 1","Cuba mountain; Worgre",c(-61.141593, 13.347529),-61.141593,13.347529
+613.399597167969,"WINO","PO5","AM6","9,10","Forest","Survey design 2","Mahorne Ridge, higher up",c(-61.154251, 13.332372),-61.154251,13.332372
+331.391967773438,"WINO","PO6","AM26","9,10","Forest","Survey design 1","Mahorne Ridge",c(-61.144725, 13.327007),-61.144725,13.327007
+373.18408203125,"WINO","PO7","AM27","9,10","Forest, close to settlement","Gap point, Bamboo ridge","",c(-61.152653, 13.315628),-61.152653,13.315628
+190.217636108398,"LEEW","PO26","AM46","18,19","Agriculture, transition secondary","New point","Trinity trail, forestry will find the trail",c(-61.215032, 13.30894),-61.215032,13.30894
+267.514221191406,"LEEW","PO27","AM47","18,19","Forest","Survey design 2","Use trail of Monkashung",c(-61.218415, 13.289303),-61.218415,13.289303
+294.379241943359,"LEEW","PO28","AM48","18,19","Forest","Watchpoint, Tuscany","",c(-61.218944, 13.278656),-61.218944,13.278656
+541.599975585938,"LEEW","PO29","AM49","18,19","Forest","Gap point, Linlley valley","",c(-61.212642, 13.264618),-61.212642,13.264618
+180.979797363281,"LEEW","PO30","AM50","18,19","Forest","Survey design 1","Petit bordel",c(-61.239373, 13.278128),-61.239373,13.278128
+441.770172119141,"LEEW","PO31","AM1","18,19","Forest","Watchpoint 8","Cumberland, close to the water tank, Hermitage",c(-61.206077, 13.251476),-61.206077,13.251476
+365.321838378906,"LEEW","PO32","AM14","18,19","Forest","Watchpoint 6","Cumberland, last watchpoint, young man valley",c(-61.215274, 13.241607),-61.215274,13.241607
+332.377319335938,"LEEW","PO33","AM3","18,19","Agriculture","Survey design 2","Coffee trail",c(-61.22192, 13.236552),-61.22192,13.236552
+498.080383300781,"LEEW","PO34","AM4","18,19","Forest. Agriculture?","Gap, Johnson Mt","",c(-61.241505, 13.234625),-61.241505,13.234625
+473.904266357422,"LEEW","PO35","AM5","18,19","Forest","Survey design 1","Layou, find the point",c(-61.234028, 13.215958),-61.234028,13.215958
+584.374389648438,"WINO","PO8","AM28","9,10","Point up in Soufriere trail, up high","Soufriere trail","Random point at higher elevation",c(-61.165173, 13.322108),-61.165173,13.322108
+186.089248657227,"WISO","PO9","AM29","13,15","Farmland","Survey design 2","Hells gate",c(-61.135758, 13.303578),-61.135758,13.303578
+197.9013671875,"WISO","PO10","AM32","13,15","Farmland, mixed","Survey design 1","Mont pleasant; road to Macmay Fall",c(-61.141611, 13.288478),-61.141611,13.288478
+161.661376953125,"WISO","PO11","AM30","13,15","Farmland","Gap point, Old valley","",c(-61.132978, 13.275263),-61.132978,13.275263
+314.971557617188,"WISO","PO12","AM31","13,15","Forest","Watchpoint 13 (opposite ridge), Congo Calley","Forestry boundary trail; Barry will decide on the point, going to the valley",c(-61.14801, 13.270992),-61.14801,13.270992
+318.267639160156,"WISO","PO13","AM33","13,15","Farmland, mixed","Survey design 2","Perseverance",c(-61.153558, 13.27864),-61.153558,13.27864
+355.595977783203,"WISO","PO14","AM34","13,15","Forest","Watchpoing 16 Jennings ","Pass the watertank, and forestry plantation, turn left into that area",c(-61.15433, 13.26595),-61.15433,13.26595
+297.173309326172,"WISO","PO15","AM35","13,15","Farmland","Survey design 2","River 14, Locust mountain",c(-61.154389, 13.252193),-61.154389,13.252193
+428.756072998047,"WISO","PO16","AM36","13,15","Forest, plantation forest","Survey design 2","Silverspoon, route to watchpoint 10",c(-61.166769, 13.24012),-61.166769,13.24012
+296.725158691406,"WISO","PO17","AM37","13,15","Forest","Survey design 1","Diamond/Bobby stone area",c(-61.156201, 13.234689),-61.156201,13.234689
+445.249755859375,"WISO","PO18","AM38","13,15","Forest, farmland","Study design 1","Greiggs mt,Tibreau trail",c(-61.177611, 13.225097),-61.177611,13.225097
+574.599548339844,"CENT","PO19","AM39","16,17","Forest, plantation forest","Study design 2","Montreal trail",c(-61.190495, 13.213804),-61.190495,13.213804
+430.800537109375,"CENT","PO20","AM40","16,17","Forest","Study design 2","Majorca, water tank",c(-61.194134, 13.198923),-61.194134,13.198923
+355.805145263672,"CENT","PO21","AM41","16,17","Forest, farmland","Study design 2","Herbert trail",c(-61.20421, 13.17868),-61.20421,13.17868
+423.931396484375,"CENT","PO22","AM42","16,17","Plantation forest","Gap point, Fenton","Murray",c(-61.207144, 13.188083),-61.207144,13.188083
+444.901306152344,"CENT","PO23","AM43","16,17","Forest","Gap point, Mt St Andrews","4 corners about the poultry farm: Wy 5, on a curve: straight in the forest, 6mts in, a tree to the right",c(-61.220177, 13.18527),-61.220177,13.18527
+459.174865722656,"CENT","PO24","AM44","16,17","Plantation forest","Study design 1","Vermont, Laury trail",c(-61.209611, 13.201889),-61.209611,13.201889
+395.079864501953,"CENT","PO25","AM45","16,17","Forest","Watchpoint 2, Paradise","About 100mts before watchpoint, to the left of the trail. About ",c(-61.218403, 13.217502),-61.218403,13.217502

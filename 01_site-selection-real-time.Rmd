@@ -7,7 +7,7 @@ editor_options:
 
 The aim of this script is to identify locations that are suitable to carry out acoustic monitoring of the St. Vincent's parrot across St. Vincent. Specific factors to consider are distance between recorders, elevation, habitat type and logistical constraints. 
 
-This script was initially generated during a workshop with the Forestry Department of St. Vincent and the Grenadines on Nov 4th 2024.  
+This script was initially generated during a workshop with the Forestry Department of St. Vincent and the Grenadines on Nov 4th 2024 and sites were generated in real-time by consulting Forestry Staff.
 
 Note: _Load the workspace saved if you have already used functions from mapEdit to interactively edit the map and add locations_.
 
@@ -127,7 +127,7 @@ vis
 
 ## Manually edit and choose new points for the study
 
-At this stage, we work with Forestry agents from SVG to determine what points should be ultimately chosen for the monitoring of the St. Vincent's parrot (If you have done this already, please skip and carry out other analysis)
+At this stage, we worked with Forestry agents from SVG to determine what points should be ultimately chosen for the monitoring of the St. Vincent's parrot (If you have done this already, please skip and carry out other analysis). It has been commented out as this was already done on Nov 4th, 2024. 
 ```{r}
 ## Using functions from mapedit
 ## Note: the following lines of code can open an interactive html file that can be edited
@@ -152,10 +152,11 @@ surveyLocs$elevation_in_metres <- as.numeric(as.character(surveyLocs$elevation_i
 
 ## load the survey point attributes taken down earlier
 ## during the workshop on Nov 4th, 2024 - a .csv was co-created with the forestry department staff to figure out audio recorder deployment locations
+## this .csv was co-created while the interactive map was being edited.
 ## additional information on each location chosen interactively was added to separate columns
 ## in addition, a separate column was created to merge the survey location information (generated above interactively) with the attributes
 
-surveyAttr <- read.csv("data/survey_pointAttributes.csv")
+surveyAttr <- read.csv("data/fieldwork/survey_pointAttributes.csv")
 
 ## add the survey attributes to the survey locations
 surveyLocs <- right_join(surveyLocs,
@@ -174,7 +175,7 @@ surveyLocs <- st_as_sf(surveyLocs) %>%
   `st_crs<-`(4326)
 
 # saving shapefiles for visualization/viewing in other softwares
-st_write(surveyLocs, "data/spatial/surveyLocations.shp",
+st_write(surveyLocs, "data/spatial/preliminary_fieldwork_locations.shp",
          driver = "ESRI Shapefile")
 
 # write out latitude and longitude for .csv
@@ -182,7 +183,7 @@ surveyLocs <- surveyLocs %>%
   dplyr::mutate(longitude = sf::st_coordinates(.)[,1],
                 latitude = sf::st_coordinates(.)[,2])
 
-write.csv(surveyLocs, "data/survey_locations.csv",
+write.csv(surveyLocs, "data/fieldwork/preliminary_fieldwork_locations.csv",
           row.names = F)
 ```
 
@@ -227,11 +228,12 @@ names(gpx) <- c("name","geometry")
 # see git issue: https://github.com/r-spatial/sf/issues/2202
 library(rgdal)
 gpx <- as(gpx, "Spatial")
-writeOGR(gpx, "data/surveyLocations-for-conversion.gpx", driver = "GPX", layer = "waypoints")
+writeOGR(gpx, "data/spatial/preliminary-fieldwork-locations-for-conversion.gpx", driver = "GPX", layer = "waypoints")
 
 # Now, please upload the above file in GPX Studio to make sure everything is accurate and save it again as a .gpx file to get the accurate format (https://gpx.studio/). 
 ```
 
-Once fieldwork has been completed, please include the updated .gpx files and .shp files in the results/outputs folders. 
+Once fieldwork has been completed, please include the updated .gpx files and .shp files in the results/outputs folders. The .gpx file shared with Forestry staff is called `preliminary-fieldwork-locations-for-gps.gpx` and is located within the `data/spatial/` folder.   
 
+Once fieldwork was completed, the locations where recorders were deployed can be accessed from the `data/fieldwork/recorder-deployment-retrival-info.csv` or from `data/acoustic-metadata.csv`. 
 

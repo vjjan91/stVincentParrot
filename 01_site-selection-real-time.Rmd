@@ -191,7 +191,7 @@ write.csv(surveyLocs, "data/fieldwork/preliminary_fieldwork_locations.csv",
 ```{r}
 # to save this to a file 
 # if you would like to share this with collaborators/colleagues
-html_fl <- tempfile(tmpdir = getwd(), fileext = "interactive-visualization-surveyLocations.html")
+html_fl <- tempfile(tmpdir = getwd(), fileext = "interactive-visualization-preliminary-fieldwork-locations.html")
 
 ## load trails and range shapefiles before you take a screenshot
 trailA <- st_read("data/spatial/trailA.shp")
@@ -211,7 +211,7 @@ mapview::mapshot(surveyMap, url = html_fl)
 surveyMap
 ```
 
-<iframe src="interactive-visualization-surveyLocations.html" height="600px" width="100%" style="border:none;"></iframe>
+<iframe src="interactive-visualization-preliminary-fieldwork-locations.html" height="600px" width="100%" style="border:none;"></iframe>
 
 ## Create .gpx file for GPS
 

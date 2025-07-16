@@ -117,7 +117,7 @@ date,time,range,data_collector,survey_point_number,latitude,longitude,deployed_r
 11/6/2024,17:05:00,Central,Shannette Jackson,PO20,13.199042,-61.194283,Deployed,AM40,421.9858704,
 12/6/2024,12:07:00,Central,Ansaki Roberts,PO20,13.199042,-61.194283,Removed,AM40,421.9858704,
 1/8/2025,9:48:00,Central,Philmore lynch,PO20,13.199042,-61.194283,Deployed,AM40,421.9858704,
-2/26/2025,12:06:00,Central,Glen Grant,PO20,13.199042,-61.194283,Removed,AM20,421.9858704,
+2/26/2025,12:06:00,Central,Glen Grant,PO20,13.199042,-61.194283,Removed,AM40,421.9858704,
 4/1/2025,11:59:00,Central,Glen Grant,PO20,13.199042,-61.194283,Deployed,AM40,421.9858704,
 5/14/2025,10:05:00,Central,Ansaki Roberts,PO20,13.199042,-61.194283,Removed,AM40,421.9858704,
 5/20/2025,11:22:00,Central,Glen Grant,PO20,13.199042,-61.194283,Deployed,AM40,421.9858704,
@@ -250,12 +250,12 @@ date,time,range,data_collector,survey_point_number,latitude,longitude,deployed_r
 12/31/2024,13:56:00,Windward North,Rawl Baptiste,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
 1/7/2025,12:12:00,Windward North,Rawl Baptiste,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,
 2/13/2025,9:22:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
-2/28/2025,11:51:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM8,584.6050415,AM27 replaced with AM8
-3/29/2025,16:31:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM8,584.6050415,
-4/3/2025,11:15:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM8,584.6050415,On a Spanish ash tree below the flagging
-5/5/2025,11:06:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM8,584.6050415,
-5/9/2025,10:15:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM8,584.6050415,On a Spanish ash tree opposite pink flagging
-6/10/2025,9:48:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM8,584.6050415,
+2/28/2025,11:51:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,
+3/29/2025,16:31:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
+4/3/2025,11:15:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,On a Spanish ash tree below the flagging
+5/5/2025,11:06:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
+5/9/2025,10:15:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,On a Spanish ash tree opposite pink flagging
+6/10/2025,9:48:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
 11/22/2024,11:59:00,Windward North,Arnos Lorraine,PO8,13.321877,-61.165487,Deployed,AM28,584.6050415,
 12/31/2024,12:43:00,Windward North,Rawl Baptiste,PO8,13.321877,-61.165487,Removed,AM28,584.6050415,
 1/7/2025,11:17:00,Windward North,Rawl Baptiste,PO8,13.321877,-61.165487,Deployed,AM28,584.6050415,

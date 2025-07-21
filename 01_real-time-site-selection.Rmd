@@ -9,7 +9,7 @@ The aim of this script is to identify locations that are suitable to carry out a
 
 This script was initially generated during a workshop with the Forestry Department of St. Vincent and the Grenadines on Nov 4th 2024 and sites were generated in real-time by consulting Forestry Staff.
 
-Note: _Load the workspace saved if you have already used functions from mapEdit to interactively edit the map and add locations_.
+Note: _Load the workspace saved (siteSelection.RData) if you have already used functions from mapEdit to interactively edit the map and add locations_.
 
 ## Load necessary libraries
 ```{r}

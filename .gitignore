@@ -42,3 +42,6 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
+# don't upload BirdNET files or audio files as they are too large
+results/BirdNET-outputs
+results/BirdNET-segments

@@ -234,35 +234,35 @@ date,time,range,data_collector,survey_point_number,latitude,longitude,deployed_r
 ,,Windward North,,PO4,13.345388,-61.139628,Removed,AM24,251.8390808,lacking date of removal
 ,,Windward North,,PO4,13.345388,-61.139628,Deployed,AM24,251.8390808,lacking date of deployment
 6/10/2025,11:14:00,Windward North,Quasim Roban,PO4,13.345388,-61.139628,Removed,AM24,251.8390808,
-11/8/2024,10:46:00,Windward North,Leon Matthews,PO5,13.33282,-61.154635,Deployed,AM6,633.9182739,
-,,Windward North,,PO5,13.33282,-61.154635,Removed,AM6,633.9182739,lacking date of removal
-1/14/2025,12:22:00,Windward North,Rawl Baptiste,PO5,13.33282,-61.154635,Deployed,AM6,633.9182739,
-2/19/2025,12:28:00,Windward North,Rawl Baptiste,PO5,13.33282,-61.154635,Removed,AM6,633.9182739,
-2/28/2025,9:12:00,Windward North,Quasim Roban,PO5,13.33282,-61.154635,Deployed,AM7,633.9182739,Confirm is this is actually AM7.
-3/30/2025,7:32:00,Windward North,Quasim Roban,PO5,13.33282,-61.154635,Removed,AM7,633.9182739,
-11/8/2024,12:06:00,Windward North,Leon Matthews,PO6,13.33282,-61.154635,Deployed,AM26,633.9182739,
-,,Windward North,,PO6,13.33282,-61.154635,Removed,AM26,633.9182739,lacking date of removal
-1/14/2025,11:06:00,Windward North,Leon Matthews,PO6,13.33282,-61.154635,Deployed,AM26,633.9182739,
-2/19/2025,11:01:00,Windward North,Rawl Baptiste,PO6,13.33282,-61.154635,Removed,AM26,633.9182739,
-2/28/2025,8:14:00,Windward North,Quasim Roban,PO6,13.33282,-61.154635,Deployed,AM26,633.9182739,On a sweetwood tree below the trail
-3/30/2025,6:56:00,Windward North,Quasim Roban,PO6,13.33282,-61.154635,Removed,AM26,633.9182739,
-11/18/2024,10:31:00,Windward North,Rawl Baptiste,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,
-12/31/2024,13:56:00,Windward North,Rawl Baptiste,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
-1/7/2025,12:12:00,Windward North,Rawl Baptiste,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,
-2/13/2025,9:22:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
-2/28/2025,11:51:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,
-3/29/2025,16:31:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
-4/3/2025,11:15:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,On a Spanish ash tree below the flagging
-5/5/2025,11:06:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
-5/9/2025,10:15:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Deployed,AM27,584.6050415,On a Spanish ash tree opposite pink flagging
-6/10/2025,9:48:00,Windward North,Quasim Roban,PO7,13.321877,-61.165487,Removed,AM27,584.6050415,
-11/22/2024,11:59:00,Windward North,Arnos Lorraine,PO8,13.321877,-61.165487,Deployed,AM28,584.6050415,
-12/31/2024,12:43:00,Windward North,Rawl Baptiste,PO8,13.321877,-61.165487,Removed,AM28,584.6050415,
-1/7/2025,11:17:00,Windward North,Rawl Baptiste,PO8,13.321877,-61.165487,Deployed,AM28,584.6050415,
-2/13/2025,8:33:00,Windward North,Quasim Roban,PO8,13.321877,-61.165487,Removed,AM28,584.6050415,
-2/28/2025,12:05:00,Windward North,Quasim Roban,PO8,13.321877,-61.165487,Deployed,AM28,584.6050415,
-3/30/2025,3:37:00,Windward North,Quasim Roban,PO8,13.321877,-61.165487,Removed,AM28,584.6050415,
-4/3/2025,10:16:00,Windward North,Quasim Roban,PO8,13.321877,-61.165487,Deployed,AM28,584.6050415,
+11/8/2024,10:46:00,Windward North,Leon Matthews,PO5,13.343589,-61.157725,Deployed,AM6,633.9182739,
+,,Windward North,,PO5,13.343589,-61.157725,Removed,AM6,633.9182739,lacking date of removal
+1/14/2025,12:22:00,Windward North,Rawl Baptiste,PO5,13.343589,-61.157725,Deployed,AM6,633.9182739,
+2/19/2025,12:28:00,Windward North,Rawl Baptiste,PO5,13.343589,-61.157725,Removed,AM6,633.9182739,
+2/28/2025,9:12:00,Windward North,Quasim Roban,PO5,13.343589,-61.157725,Deployed,AM7,633.9182739,Confirm is this is actually AM7.
+3/30/2025,7:32:00,Windward North,Quasim Roban,PO5,13.343589,-61.157725,Removed,AM7,633.9182739,
+11/8/2024,12:06:00,Windward North,Leon Matthews,PO6,13.33425,-61.150058,Deployed,AM26,633.9182739,
+,,Windward North,,PO6,13.33425,-61.150058,Removed,AM26,633.9182739,lacking date of removal
+1/14/2025,11:06:00,Windward North,Leon Matthews,PO6,13.33425,-61.150058,Deployed,AM26,633.9182739,
+2/19/2025,11:01:00,Windward North,Rawl Baptiste,PO6,13.33425,-61.150058,Removed,AM26,633.9182739,
+2/28/2025,8:14:00,Windward North,Quasim Roban,PO6,13.33425,-61.150058,Deployed,AM26,633.9182739,On a sweetwood tree below the trail
+3/30/2025,6:56:00,Windward North,Quasim Roban,PO6,13.33425,-61.150058,Removed,AM26,633.9182739,
+11/18/2024,10:31:00,Windward North,Rawl Baptiste,PO7,13.326072,-61.154375,Deployed,AM27,584.6050415,
+12/31/2024,13:56:00,Windward North,Rawl Baptiste,PO7,13.326072,-61.154375,Removed,AM27,584.6050415,
+1/7/2025,12:12:00,Windward North,Rawl Baptiste,PO7,13.326072,-61.154375,Deployed,AM27,584.6050415,
+2/13/2025,9:22:00,Windward North,Quasim Roban,PO7,13.326072,-61.154375,Removed,AM27,584.6050415,
+2/28/2025,11:51:00,Windward North,Quasim Roban,PO7,13.326072,-61.154375,Deployed,AM27,584.6050415,
+3/29/2025,16:31:00,Windward North,Quasim Roban,PO7,13.326072,-61.154375,Removed,AM27,584.6050415,
+4/3/2025,11:15:00,Windward North,Quasim Roban,PO7,13.326072,-61.154375,Deployed,AM27,584.6050415,On a Spanish ash tree below the flagging
+5/5/2025,11:06:00,Windward North,Quasim Roban,PO7,13.326072,-61.154375,Removed,AM27,584.6050415,
+5/9/2025,10:15:00,Windward North,Quasim Roban,PO7,13.326072,-61.154375,Deployed,AM27,584.6050415,On a Spanish ash tree opposite pink flagging
+6/10/2025,9:48:00,Windward North,Quasim Roban,PO7,13.326072,-61.154375,Removed,AM27,584.6050415,
+11/22/2024,11:59:00,Windward North,Arnos Lorraine,PO8,13.32535,-61.175811,Deployed,AM28,584.6050415,
+12/31/2024,12:43:00,Windward North,Rawl Baptiste,PO8,13.32535,-61.175811,Removed,AM28,584.6050415,
+1/7/2025,11:17:00,Windward North,Rawl Baptiste,PO8,13.32535,-61.175811,Deployed,AM28,584.6050415,
+2/13/2025,8:33:00,Windward North,Quasim Roban,PO8,13.32535,-61.175811,Removed,AM28,584.6050415,
+2/28/2025,12:05:00,Windward North,Quasim Roban,PO8,13.32535,-61.175811,Deployed,AM28,584.6050415,
+3/30/2025,3:37:00,Windward North,Quasim Roban,PO8,13.32535,-61.175811,Removed,AM28,584.6050415,
+4/3/2025,10:16:00,Windward North,Quasim Roban,PO8,13.32535,-61.175811,Deployed,AM28,584.6050415,
 11/8/2024,15:05:00,Windward South,Quasim Roban,PO9,13.30494833,-61.14471,Deployed,AM29,253.8547211,
 12/10/2024,12:45:00,Windward South,Ian Christopher,PO9,13.30494833,-61.14471,Removed,AM29,253.8547211,
 12/19/2024,12:36:00,Windward South,Ian Christopher,PO9,13.30494833,-61.14471,Deployed,AM29,253.8547211,

@@ -197,7 +197,7 @@ html_fl <- tempfile(tmpdir = getwd(), fileext = "interactive-visualization-preli
 trailA <- st_read("data/spatial/trailA.shp")
 trailB <- st_read("data/spatial/Trail_2.shp")
 trailC <- st_read("data/spatial/Trails.shp")
-range <- st_read("data/spatial/Range_B.shp")
+range <- st_read("data/spatial/range_layer.shp")
 
 surveyMap <- mapview(surveyLocs, col.regions = "red") +
   mapview(trailA, col.regions = "black") +

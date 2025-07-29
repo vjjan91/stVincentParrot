@@ -1,0 +1,406 @@
+---
+editor_options:
+  chunk_output_type: console
+---
+
+# Spatial analysis of BirdNET detections
+
+In this script, we carry out spatial analyses of acoustic detections that were thresholded in the previous script. We work with a subset of detections that have a 95% probability of being a true positive.  
+
+## Load necessary libraries
+```{r}
+library(tidyverse)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(data.table)
+library(extrafont)
+library(sf)
+library(raster)
+library(stars)
+library(spatstat)
+library(mapview)
+
+# for plotting
+library(scales)
+library(ggplot2)
+library(ggspatial)
+library(colorspace)
+library(scico)
+library(RColorBrewer)
+library(paletteer)
+```
+
+## Load acoustic data and metadata
+```{r}
+metadata <- read.csv("data/acoustic-metadata.csv")
+acoustic_data <- read.csv("results/datSubset.csv")
+```
+
+## Visualizing sampling effort
+
+How much acoustic data was collected? Using information on the first and last date of recorded acoustic data, we could visualize the total recorded days across months and sites.
+
+```{r}
+# ensure structure of dates in the metadata file is date
+metadata$first_file_date <- ymd(metadata$first_file_date)
+metadata$last_file_date <- ymd(metadata$last_file_date)
+
+## create a factor of survey_point_number ordered by range_name
+metadata <- metadata %>%
+  arrange(range_name, survey_point_number) %>%
+  mutate(survey_point_ordered = factor(survey_point_number, 
+                 levels = unique(survey_point_number)))
+
+## for the visualization
+range_info <- metadata %>%
+  group_by(range_name) %>%
+  summarise(min_point = min(as.numeric(survey_point_ordered)),
+            max_point = max(as.numeric(survey_point_ordered)))
+
+# create date breaks starting in November 2024
+date_breaks <- seq(as.Date("2024-11-01"), 
+                  max(metadata$last_file_date, na.rm = TRUE),
+                  by = "month")
+
+# visualization
+fig_samplingEffort <- metadata %>%
+  filter(!is.na(first_file_date)) %>%
+  ggplot(., aes(y = survey_point_ordered)) +  
+  geom_segment(aes(x = first_file_date, xend = last_file_date, 
+                   yend = survey_point_ordered), 
+               color = "#d95f02", size = 1) +
+    # add vertical lines for range boundaries
+  geom_hline(data = range_info, 
+             aes(yintercept = min_point - 0.5),
+             color = "grey20", size = 0.8) +
+  geom_hline(data = range_info, 
+             aes(yintercept = max_point + 0.5),
+             color = "grey20", size = 0.8) +
+  # add range names as annotations
+  geom_text(data = range_info, 
+            aes(x = min(metadata$first_file_date, na.rm = TRUE),
+                y = (min_point + max_point)/2,
+                label = range_name),
+            hjust = 0.5, color = "grey10") +
+ scale_x_date(
+    limits = as.Date(c("2024-11-01", "2025-07-01")), 
+    breaks = seq(as.Date("2024-11-01"), as.Date("2025-07-01"), by = "month"),
+    date_labels = "%b %Y",
+    expand = expansion(mult = c(0.05, 0))) +
+  labs(title = "Sampling Effort",
+       x = "Acoustic Recording Dates",
+       y = "Survey Point Number") +
+  theme_bw() +
+  theme(
+    text = element_text(family = "Century Gothic", size = 14, face = "bold"),
+    plot.title = element_text(
+      family = "Century Gothic",
+      size = 15, face = "bold"
+    ),
+    plot.subtitle = element_text(
+      family = "Century Gothic",
+      size = 15, face = "bold", color = "#1b2838"
+    ),
+    axis.title = element_text(
+      family = "Century Gothic",
+      size = 18, face = "bold"
+    ),
+    legend.position = "top",
+    legend.title = element_blank(),
+    legend.text = element_text(size = 10),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+ggsave(fig_samplingEffort, filename = "figs/fig_sampling_effort.png", width = 14, height = 7, device = png(), units = "in", dpi = 300)
+dev.off()
+```
+
+![Acoustic sampling effort shows that Windward South has the least gaps between deployment and had the most numbers of recording days, while Central range had a lot of gaps and very few recording days. Broadly, sampling was carried out from early Nov 2024 to the end of June 2025.](figs/fig_sampling_effort.png)  
+
+## How much data was recorded at each site?
+
+Creating a bar plot with total number of days of recording at each site. Please refer to the metadata to ascertain the configuration and deployment details for the recorders. 
+```{r}
+## total number of recorded days
+recording_days <- metadata %>%
+  rowwise() %>%
+  mutate(
+    days = list(seq(first_file_date, last_file_date, by = "day"))
+  ) %>%
+  unnest(days) %>%
+  distinct(days, survey_point_number) %>%
+  group_by(survey_point_number) %>%
+  summarise(
+    total_recording_days = n(),
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(total_recording_days)) %>%
+  left_join(metadata %>% 
+              dplyr::select(survey_point_number, range_name) %>% 
+              distinct(),
+            by = "survey_point_number")
+
+# calculate total days per range
+range_totals <- recording_days %>%
+  group_by(range_name) %>%
+  summarise(total_days = sum(total_recording_days))
+
+# The rest of your plotting code remains the same
+fig_totalRecordedDays <- recording_days %>%
+  arrange(range_name, survey_point_number) %>%
+  mutate(survey_point_number = factor(survey_point_number, levels = unique(survey_point_number))) %>%
+  ggplot(., aes(x = survey_point_number, y = total_recording_days)) +
+  geom_bar(stat = "identity", fill = "#d95f02", alpha = 0.9) +
+  geom_text(aes(label = total_recording_days), 
+            vjust = -0.5, size = 5, family = "Century Gothic") +
+  facet_grid(. ~ range_name, scales = "free_x", space = "free_x",
+             labeller = labeller(range_name = function(x) 
+               paste0(x, "\nTotal recording days: ", 
+                     range_totals$total_days[range_totals$range_name == x])))+
+  theme_bw() +
+  labs(
+    x = "\nSurvey Point Number",
+    y = "Number of recording days\n",
+    title = ""
+  ) +
+  theme(
+    axis.title = element_text(
+      family = "Century Gothic",
+      size = 14, face = "bold"
+    ),
+    axis.text = element_text(family = "Century Gothic", size = 14),
+    axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1),
+    legend.position = "none",
+    plot.title = element_text(
+      family = "Century Gothic",
+      size = 16, face = "bold",
+      hjust = 0.5
+    ),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    strip.text = element_text(
+      family = "Century Gothic",
+      size = 12, face = "bold"
+    ),
+    strip.background = element_rect(fill = "grey95")
+  )
+
+ggsave(fig_totalRecordedDays, filename = "figs/fig_total_days_audioRecording.png", width = 14, height = 8, device = png(), units = "in", dpi = 300)
+dev.off()
+```
+
+![Total number of audio recording days across sites and different ranges illustrate the Windward South had the most number of audio recording days followed by Leeward Range.](figs/fig_total_days_audioRecording.png)
+
+## Acoustic detections across days and months  
+
+```{r}
+# cumulative detections by site
+cumulative_detections <- acoustic_data %>%
+   group_by(range_code, survey_point_number) %>%
+  summarise(cumulative_detections = n())
+
+# here, observe that three sites have fewer than five detections and we filter these sites out for future analyses. These sites include PO27, PO35 and PO9. 
+
+# group detections by day, range and site_name and filter out the above sites
+detections <- acoustic_data %>%
+  filter(survey_point_number != "PO27") %>%
+  filter(survey_point_number != "PO35") %>%
+  filter(survey_point_number != "PO9")  %>%
+  group_by(range_code, survey_point_number, date) %>%
+  summarise(total_detections = n()) %>%
+  left_join(metadata %>% 
+              dplyr::select(survey_point_number, 
+                            range_name) %>% 
+              distinct(), 
+            by = "survey_point_number")
+
+# change date structure
+detections$date <- ymd(detections$date)
+
+## visualization
+fig_detections_days <-  detections %>%
+  ggplot(., aes(x = date, y = survey_point_number, 
+                fill = total_detections)) +
+  geom_tile(color = "black") + 
+  scale_fill_gradientn(colours = c(brewer.pal(9, "Reds"))) +
+  scale_x_date(date_labels = "%b %d %Y",
+               date_breaks = "14 days") + 
+  # Add faceting by range_name
+  facet_grid(range_name ~ ., scales = "free_y", space = "free_y") +
+  labs(title = "Detections of St. Vincent Amazon across sites and days",
+       x = "Date of acoustic detection",
+       y = "Survey Point Number",
+       fill = "Acoustic detections") + 
+  theme_bw() +
+  theme(
+    axis.title = element_text(
+      family = "Century Gothic",
+      size = 14, face = "bold"
+    ),
+    axis.text = element_text(family = "Century Gothic", size = 12),
+    axis.text.x = element_text(angle = 45, hjust = 1, face = "italic"),
+    legend.title = element_text(family = "Century Gothic"),
+    legend.text = element_text(family = "Century Gothic"),
+    strip.text = element_text(
+      family = "Century Gothic",
+      size = 12, face = "bold"
+    ),
+    strip.background = element_rect(fill = "grey95")
+  )
+
+ggsave(fig_detections_days, filename = "figs/fig_detections_by_days.png", width = 14, height = 7, device = png(), units = "in", dpi = 300)
+dev.off()
+```
+
+![Acoustic detections of the St. Vincent Amazon across the recording days for each range revealed a high number of detections across PO33 in the Leeward Range](figs/fig_detections_by_days.png)
+
+## Bubble map of acoustic detections  
+
+```{r}
+## load shapefiles of ranges 
+st_vincent <- st_read("data/spatial/range_layer.shp")
+st_vincent <- st_transform(st_vincent, 4326)
+
+## merge lat-long from metadata with the acoustic_data file
+acoustic_data <- left_join(acoustic_data, metadata[,c(1,2,15:17)])
+
+## convert to an sf object
+acoustic_data <- st_as_sf(acoustic_data, coords = c("longitude", "latitude"), crs = st_crs(st_vincent))
+
+# group detections by day, range and site_name and filter sites mentioned previously
+detections <- acoustic_data %>%
+  filter(survey_point_number != "PO27") %>%
+  filter(survey_point_number != "PO35") %>%
+  filter(survey_point_number != "PO9")  %>%
+  group_by(range_code, survey_point_number, date) %>%
+  summarise(total_detections = n())
+
+# get cumulative acoustic detections
+cumulative_detections <- acoustic_data %>%
+   group_by(range_code, survey_point_number) %>%
+  summarise(cumulative_detections = n())
+
+## visualization
+fig_detections_bubbleMap <- ggplot(data = st_vincent) +
+  geom_sf(fill = NA, color = "black") +
+  scale_color_gradientn(colors = c(brewer.pal(5, "Reds"))) +
+  geom_sf(data = cumulative_detections, 
+          aes(size = cumulative_detections, fill = cumulative_detections),
+          shape = 21,
+          alpha = 0.7,
+          color = "black") + 
+  geom_label_repel(data = cumulative_detections %>% 
+                     st_coordinates() %>% 
+                     as.data.frame() %>% 
+                     bind_cols(cumulative_detections %>% st_drop_geometry()),
+                   aes(x = X, y = Y, label = survey_point_number),
+                   size = 2.5,
+                   family = "Century Gothic",
+                   force = 1,
+                   label.padding = 0.15,
+                   box.padding = 0.5,
+                   point.padding = 0.5,
+                   min.segment.length = 0,
+                   seed = 42) +
+  scale_size_continuous(range = c(3, 20)) +
+  scale_fill_gradientn(colors = c(brewer.pal(5, "Reds"))) + 
+  labs(x = '',
+       y = '',
+       size = 'Acoustic detections', 
+       fill = 'Acoustic detections', 
+       title = "Cumulative acoustic detections of the St. Vincent Amazon",
+       subtitle = "PO27, PO35 and PO9 had fewer than five detections") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(
+      family = "Century Gothic",
+      size = 14, face = "bold", hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      family = "Century Gothic",
+      size = 12, face = "italic", hjust = 0.5
+    ),
+    axis.title = element_text(
+      family = "Century Gothic",
+      size = 14, face = "bold"
+    ),
+    axis.text = element_text(family = "Century Gothic", size = 12), 
+    legend.position = "right",
+    legend.title = element_text(family = "Century Gothic", size = 10, face = "bold"), 
+    legend.text = element_text(family = "Century Gothic", size = 10), 
+    panel.border = element_blank()   
+  ) 
+
+ggsave(fig_detections_bubbleMap, filename = "figs/fig_cumulativeDetections_bubbleMap.png", width = 9, height = 9, device = png(), units = "in", dpi = 300)
+dev.off()
+```
+
+![A bubble map of cumulative acoustic detections of the St. Vincent Amazon across the entire duration of audio recording](figs/fig_cumulativeDetections_bubbleMap.png)
+## Weighting the bubble plot by sampling effort
+
+We will recreate the cumulative detections plot, but we will weight it by sampling effort. In our case, we will weight it by the total number of days spent recording.
+
+```{r}
+## join recording days to cumulative detections
+cumulative_detections <- left_join(cumulative_detections, 
+                                   recording_days) %>%
+  mutate(detections_by_effort = cumulative_detections/total_recording_days)
+
+## visualization
+fig_detections_bubbleMap_by_effort <- ggplot(data = st_vincent) +
+  geom_sf(fill = NA, color = "black") +
+  scale_color_gradientn(colors = c(brewer.pal(5, "Reds"))) +
+  geom_sf(data = cumulative_detections, 
+          aes(size = detections_by_effort, fill = detections_by_effort),
+          shape = 21,
+          alpha = 0.7,
+          color = "black") + 
+  geom_label_repel(data = cumulative_detections %>% 
+                     st_coordinates() %>% 
+                     as.data.frame() %>% 
+                     bind_cols(cumulative_detections %>% st_drop_geometry()),
+                   aes(x = X, y = Y, label = survey_point_number),
+                   size = 2.5,
+                   family = "Century Gothic",
+                   force = 1,
+                   label.padding = 0.15,
+                   box.padding = 0.5,
+                   point.padding = 0.5,
+                   min.segment.length = 0,
+                   seed = 42) +
+  scale_size_continuous(range = c(3, 20)) +
+  scale_fill_gradientn(colors = c(brewer.pal(5, "Reds"))) + 
+  labs(x = '',
+       y = '',
+       size = 'Acoustic detections', 
+       fill = 'Acoustic detections', 
+       title = "Cumulative acoustic detections of the St. Vincent Amazon (controlling for sampling effort)",
+       subtitle = "PO27, PO35 and PO9 had fewer than five detections") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(
+      family = "Century Gothic",
+      size = 14, face = "bold", hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      family = "Century Gothic",
+      size = 12, face = "italic", hjust = 0.5
+    ),
+    axis.title = element_text(
+      family = "Century Gothic",
+      size = 14, face = "bold"
+    ),
+    axis.text = element_text(family = "Century Gothic", size = 12), 
+    legend.position = "right",
+    legend.title = element_text(family = "Century Gothic", size = 10, face = "bold"), 
+    legend.text = element_text(family = "Century Gothic", size = 10), 
+    panel.border = element_blank()   
+  ) 
+
+ggsave(fig_detections_bubbleMap_by_effort, filename = "figs/fig_cumulativeDetections_by_effort_bubbleMap.png", width = 10, height = 10, device = png(), units = "in", dpi = 300)
+dev.off()
+```
+
+![A bubble map of cumulative acoustic detections of the St. Vincent Amazon across the entire duration of audio recording, while controlling for sampling effort in terms of numbers of recording days](figs/fig_cumulativeDetections_by_effort_bubbleMap.png)
+

@@ -16,12 +16,16 @@ thresholding-birdnet-outputs
 load-required-libraries
 load-selection-tables-from-raven-pro
 creating-a-subset-of-data-using-the-thresholds-above
-analysis-of-birdnet-detections
+spatial-analysis-of-birdnet-detections
 load-necessary-libraries-1
 load-acoustic-data-and-metadata
 visualizing-sampling-effort
 how-much-data-was-recorded-at-each-site
 acoustic-detections-across-days-and-months
 bubble-map-of-acoustic-detections
+spatiotemporal-analyses-of-birdnet-detections
+load-necessary-libraries-2
+load-acoustic-data-and-metadata-1
 creating-a-kernel-density-map-of-cumulative-acoustic-detections-of-the-parrot-across-the-island-while-controlling-for-sampling-effort
 visualizing-detections-by-time-of-day
+detections-by-time-of-day-and-month

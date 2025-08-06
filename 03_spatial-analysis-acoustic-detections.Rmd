@@ -146,7 +146,7 @@ range_totals <- recording_days %>%
   group_by(range_name) %>%
   summarise(total_days = sum(total_recording_days))
 
-# The rest of your plotting code remains the same
+# visualization
 fig_totalRecordedDays <- recording_days %>%
   arrange(range_name, survey_point_number) %>%
   mutate(survey_point_number = factor(survey_point_number, levels = unique(survey_point_number))) %>%
@@ -157,8 +157,8 @@ fig_totalRecordedDays <- recording_days %>%
   facet_grid(. ~ range_name, scales = "free_x", space = "free_x",
              labeller = labeller(range_name = function(x) 
                paste0(x, "\nTotal recording days: ", 
-                     range_totals$total_days[range_totals$range_name == x])))+
-  theme_bw() +
+                     range_totals$total_days[range_totals$range_name == x])))
++ theme_bw() +
   labs(
     x = "\nSurvey Point Number",
     y = "Number of recording days\n",
@@ -204,9 +204,6 @@ cumulative_detections <- acoustic_data %>%
 
 # group detections by day, range and site_name and filter out the above sites
 detections <- acoustic_data %>%
-  filter(survey_point_number != "PO27") %>%
-  filter(survey_point_number != "PO35") %>%
-  filter(survey_point_number != "PO9")  %>%
   group_by(range_code, survey_point_number, date) %>%
   summarise(total_detections = n()) %>%
   left_join(metadata %>% 
@@ -226,7 +223,7 @@ fig_detections_days <-  detections %>%
   scale_fill_gradientn(colours = c(brewer.pal(9, "Reds"))) +
   scale_x_date(date_labels = "%b %d %Y",
                date_breaks = "14 days") + 
-  # Add faceting by range_name
+  # faceting by range_name
   facet_grid(range_name ~ ., scales = "free_y", space = "free_y") +
   labs(title = "Detections of St. Vincent Amazon across sites and days",
        x = "Date of acoustic detection",
@@ -267,14 +264,6 @@ acoustic_data <- left_join(acoustic_data, metadata[,c(1,2,15:17)])
 
 ## convert to an sf object
 acoustic_data <- st_as_sf(acoustic_data, coords = c("longitude", "latitude"), crs = st_crs(st_vincent))
-
-# group detections by day, range and site_name and filter sites mentioned previously
-detections <- acoustic_data %>%
-  filter(survey_point_number != "PO27") %>%
-  filter(survey_point_number != "PO35") %>%
-  filter(survey_point_number != "PO9")  %>%
-  group_by(range_code, survey_point_number, date) %>%
-  summarise(total_detections = n())
 
 # get cumulative acoustic detections
 cumulative_detections <- acoustic_data %>%
